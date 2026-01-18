@@ -1,5 +1,3 @@
-app.set("trust proxy", 1);
-
 if(process.env.NODE_ENV != "production"){
     require("dotenv").config();
 }
@@ -40,6 +38,7 @@ main()
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("trust proxy", 1);
 
 app.use(express.urlencoded({extended: true}));
 
